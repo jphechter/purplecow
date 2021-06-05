@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'purple-cow';
+
+  hit(data=String) {console.log(data)}
 }

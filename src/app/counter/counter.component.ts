@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'pc-counter',
@@ -6,17 +7,19 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-  @Output() response = new EventEmitter();
-
-  count = 1;
+  count = 0;
   clicks = 0;
-
+  url = `https://api.countapi.xyz/hit/1ccb732e-b55a-4404-ad3f-0f99c02fe44e`;
 
   handleClick() {
-    // this.response.emit("my data")
+    this.http.get(this.url).toPromise().then((data: any) => {
+      this.count = data['value'];
+      this.clicks++;  // only show after the user clicks once
+    })
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
   }

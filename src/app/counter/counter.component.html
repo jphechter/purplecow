@@ -1,5 +1,7 @@
-<button>
+<button
+  (click)="handleClick()"
+  >
   <div class="btn-text">Hit Me!</div>
 </button>
 
-<p>The number of hits is: {{count}}</p>
+<p *ngIf="clicks > 0">The number of hits is: {{count}}</p>

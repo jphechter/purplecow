@@ -1,5 +1,7 @@
 # Project Purple Cow - JP Hechter
 
+Hosted on GitHub @ https://github.com/jphechter/purplecow
+
 Welcome to "Project Purple Cow"! This is a submission for Fearless' technical trial project.
 
 This is a web application built using the Angular framework. It provides a simple user interface to 'hit' and display a number of 'hits' on a website.

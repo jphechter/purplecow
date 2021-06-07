@@ -6,7 +6,7 @@ This is a web application built using the Angular framework. It provides a simpl
 
 ## Technology Used
 
-- Angular 12.0.3
+- Angular 12.0.3 (Node.js 14.17.0 LTS)
 - CountApi.xyz
 
 ## Dev Setup
